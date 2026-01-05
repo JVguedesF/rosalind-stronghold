@@ -1,7 +1,8 @@
 from utils.utils import read_input
 
-def count_letters(dna):
-    print(dna.count("A"), dna.count("C"), dna.count("G"), dna.count("T"))
+def solve():
+    s = read_input() 
+    print(s.count("A"), s.count("C"), s.count("G"), s.count("T"))
 
-dna = read_input("input.txt")
-count_letters(dna)
+if __name__ == "__main__":
+    solve()
