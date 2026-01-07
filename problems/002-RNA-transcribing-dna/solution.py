@@ -1,9 +1,3 @@
-"""
-Rosalind ID: RNA
-Title: Transcribing DNA into RNA 
-URL: http://rosalind.info/problems/rna/
-"""
-
 from utils.utils import read_input
 
 #! Best solution
