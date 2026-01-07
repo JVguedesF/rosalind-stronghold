@@ -1,8 +1,3 @@
-"""
-Rosalind ID: FIB
-Title: Rabbits and Recurrence Relations 
-URL: http://rosalind.info/problems/fib/
-"""
 from utils.utils import read_input
 
 def solve():

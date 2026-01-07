@@ -1,8 +1,3 @@
-"""
-Rosalind ID: REVC
-Title: Complementing a Strand of DNA
-URL: http://rosalind.info/problems/revc/
-"""
 from utils.utils import read_input
 
 def solve():
