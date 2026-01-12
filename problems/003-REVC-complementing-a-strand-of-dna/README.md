@@ -2,6 +2,6 @@
 
 **URL:** http://rosalind.info/problems/revc/
 
-## Solução
+## Solution
 
-Gera o complemento reverso da fita de DNA. Utiliza `str.maketrans` e `translate` para realizar a substituição simultânea das bases pares (A ↔ T, C ↔G ) e `[::-1]` para inverter a sequência resultante.
+Generates the reverse complement of the DNA strand. Utilizes `str.maketrans` and `translate` to perform the simultaneous substitution of base pairs (A ↔ T, C ↔ G) and `[::-1]` to reverse the resulting sequence.

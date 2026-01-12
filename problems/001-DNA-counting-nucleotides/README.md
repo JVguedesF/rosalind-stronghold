@@ -2,6 +2,6 @@
 
 **URL:** http://rosalind.info/problems/dna/
 
-## Solução
+## Solution
 
-O algoritmo conta a frequência de cada nucleotídeo ('A', 'C', 'G', 'T') na string de DNA fornecida utilizando o método nativo `.count()` do Python.
+The algorithm counts the frequency of each nucleotide ('A', 'C', 'G', 'T') in the provided DNA string using Python's native `.count()` method.

@@ -2,6 +2,6 @@
 
 **URL:** http://rosalind.info/problems/gc/
 
-## Solução
+## Solution
 
-Lê o arquivo FASTA utilizando uma função auxiliar `read_fasta` implementada com leitura linha a linha (streaming) para eficiência de memória. Itera sobre o dicionário resultante calculando a porcentagem de bases 'G' e 'C' e identifica o registro com o maior conteúdo GC através de comparação direta.
+Reads the FASTA file using a `read_fasta` helper function implemented with line-by-line reading (streaming) for memory efficiency. Iterates over the resulting dictionary calculating the percentage of 'G' and 'C' bases and identifies the record with the highest GC content via direct comparison.

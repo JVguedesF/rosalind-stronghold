@@ -2,6 +2,6 @@
 
 **URL:** http://rosalind.info/problems/rna/
 
-## Solução
+## Solution
 
-O processo de transcrição consiste em substituir todas as ocorrências de Timina ('T') por Uracila ('U'). A solução iterativa percorre a string construindo uma nova sequência, respeitando a imutabilidade de strings em Python.
+The transcription process consists of replacing all occurrences of Thymine ('T') with Uracil ('U'). The iterative solution traverses the string constructing a new sequence, respecting string immutability in Python.

@@ -2,6 +2,6 @@
 
 **URL:** http://rosalind.info/problems/fib/
 
-## Solução
+## Solution
 
-Calcula o número total de pares de coelhos após $n$ meses utilizando uma variação da sequência de Fibonacci. A solução aplica a relação de recorrência $F_n = F_{n-1} + (k \times F_{n-2})$, onde $k$ representa o tamanho da ninhada (_litter size_), considerando que apenas coelhos com mais de um mês de vida (geração $n-2$) estão aptos a reproduzir.
+Calculates the total number of rabbit pairs after $n$ months using a variation of the Fibonacci sequence. Applies the recurrence relation $F_n = F_{n-1} + (k \times F_{n-2})$, where $k$ represents the litter size, considering that only rabbits older than one month (generation $n-2$) are able to reproduce.
