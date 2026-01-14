@@ -6,6 +6,6 @@ Link: [http://rosalind.info/problems/prot/](http://rosalind.info/problems/prot/)
 
 ## Solution Logic
 
-Utiliza uma tabela de busca (dicionário) para mapear cada trinca de nucleotídeos (códon) para o aminoácido correspondente.
+Uses a lookup table (dictionary) to map each nucleotide triplet (codon) to its corresponding amino acid.
 
-Para a leitura, cria-se um iterador sobre a string de RNA e utiliza-se a função `zip` passando o mesmo iterador três vezes, o que agrupa os nucleotídeos em tuplas de 3 sequencialmente. O loop é interrompido (`break`) assim que um códon de parada ("Stop") é encontrado.
+To read the sequence, it creates an iterator over the RNA string and uses `zip` passing the same iterator three times, which groups nucleotides into tuples of 3 sequentially. The loop is interrupted (`break`) as soon as a "Stop" codon is encountered.
