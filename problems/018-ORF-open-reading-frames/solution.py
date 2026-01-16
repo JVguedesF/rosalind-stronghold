@@ -1,5 +1,32 @@
 from utils.utils import read_fasta
 
+def translate_from_start(sequence, start_idx, table):
+    protein = []
+    for j in range(start_idx, len(sequence) - 2, 3):
+        codon = sequence[j:j+3]
+        amino_acid = table.get(codon)
+        
+        if amino_acid == "Stop":
+            return "".join(protein)
+        if not amino_acid:
+            break
+            
+        protein.append(amino_acid)
+    return None
+
+def get_proteins(sequence, table):
+    found_proteins = set()
+    for i in range(len(sequence) - 2):
+        if sequence[i:i+3] == "ATG":
+            result = translate_from_start(sequence, i, table)
+            if result is not None:
+                found_proteins.add(result)
+    return found_proteins
+
+def get_reverse_complement(s):
+    pairs = str.maketrans("ATGC", "TACG")
+    return s.translate(pairs)[::-1]
+
 def solve():
     dna_dict = read_fasta()
     if not dna_dict:
@@ -21,27 +48,7 @@ def solve():
         'TGG': 'W', 'CGG': 'R', 'AGG': 'R', 'GGG': 'G'
     }
 
-    def get_reverse_complement(s):
-        pairs = str.maketrans("ATGC", "TACG")
-        return s.translate(pairs)[::-1]
-
-    def get_proteins(sequence):
-        found_proteins = set()
-        for i in range(len(sequence) - 2):
-            if sequence[i:i+3] == "ATG":
-                protein = []
-                for j in range(i, len(sequence) - 2, 3):
-                    codon = sequence[j:j+3]
-                    amino_acid = table.get(codon)
-                    if amino_acid == "Stop":
-                        found_proteins.add("".join(protein))
-                        break
-                    if not amino_acid:
-                        break
-                    protein.append(amino_acid)
-        return found_proteins
-
-    results = get_proteins(dna) | get_proteins(get_reverse_complement(dna))
+    results = get_proteins(dna, table) | get_proteins(get_reverse_complement(dna), table)
     
     for p in results:
         print(p)
