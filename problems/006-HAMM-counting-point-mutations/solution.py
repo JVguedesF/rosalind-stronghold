@@ -1,4 +1,4 @@
-from utils.utils import read_lines
+from utils.io import read_lines
 
 def solve():
     seq1, seq2 = read_lines()

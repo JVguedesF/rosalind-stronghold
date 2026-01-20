@@ -1,4 +1,4 @@
-from utils.utils import read_input
+from utils.io import read_input
 
 def solve():
     counts = [int(x) for x in read_input().split()]

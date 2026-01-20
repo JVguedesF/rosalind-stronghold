@@ -1,6 +1,6 @@
 import requests
 import re
-from utils.utils import read_lines
+from utils.io import read_lines
 
 def solve():
     protein_ids = read_lines()

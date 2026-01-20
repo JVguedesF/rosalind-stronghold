@@ -1,4 +1,4 @@
-from utils.utils import read_lines
+from utils.io import read_lines
 
 def get_subsequence(seq, compare):
     n = len(seq)

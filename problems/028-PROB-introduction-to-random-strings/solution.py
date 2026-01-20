@@ -1,5 +1,5 @@
 import math
-from utils.utils import read_lines
+from utils.io import read_lines
 
 def main():
     lines = read_lines()

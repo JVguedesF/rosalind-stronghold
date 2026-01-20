@@ -1,4 +1,4 @@
-from utils.utils import read_input
+from utils.io import read_input
 
 def solve():
     protein = read_input().strip()

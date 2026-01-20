@@ -43,3 +43,5 @@ def read_lines(filename="input.txt"):
     path = _get_path(filename)
     with open(path, "r") as f:
         return [line.strip() for line in f.readlines()]
+    
+

@@ -1,5 +1,5 @@
 import itertools
-from utils.utils import read_input
+from utils.io import read_input
 
 def solve():
     n = int(read_input())

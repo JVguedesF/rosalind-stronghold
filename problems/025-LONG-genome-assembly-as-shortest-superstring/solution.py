@@ -1,4 +1,4 @@
-from utils.utils import read_fasta
+from utils.io import read_fasta
 
 def calculate_overlap(s1: str, s2: str) -> int:
     max_possible_overlap = min(len(s1), len(s2))

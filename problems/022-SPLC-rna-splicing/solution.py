@@ -1,4 +1,4 @@
-from utils.utils import read_fasta
+from utils.io import read_fasta
 
 dna_codon_table = {
     'TTT': 'F', 'CTT': 'L', 'ATT': 'I', 'GTT': 'V',

@@ -1,7 +1,7 @@
-from utils.utils import read_input
+from utils.io import read_input
 import random
 
-from utils.utils import read_input
+from utils.io import read_input
 
 def solve():
     data = read_input()

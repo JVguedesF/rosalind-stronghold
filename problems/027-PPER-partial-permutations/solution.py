@@ -1,5 +1,5 @@
 from functools import reduce
-from utils.utils import read_input
+from utils.io import read_input
 
 def solve():
     n, k = map(int, read_input().split())

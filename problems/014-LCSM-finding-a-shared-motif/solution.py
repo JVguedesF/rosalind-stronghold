@@ -1,4 +1,4 @@
-from utils.utils import read_fasta
+from utils.io import read_fasta
 
 def solve():
     sequences_dict = read_fasta()

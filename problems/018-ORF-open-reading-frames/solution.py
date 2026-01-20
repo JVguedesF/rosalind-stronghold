@@ -1,4 +1,4 @@
-from utils.utils import read_fasta
+from utils.io import read_fasta
 
 def translate_from_start(sequence, start_idx, table):
     protein = []
