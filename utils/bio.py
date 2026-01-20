@@ -1,5 +1,4 @@
 # --- Constantes ---
-
 DNA_CODON_TABLE = {
     'TTT': 'F', 'CTT': 'L', 'ATT': 'I', 'GTT': 'V',
     'TTC': 'F', 'CTC': 'L', 'ATC': 'I', 'GTC': 'V',
@@ -47,6 +46,13 @@ MONOISOTOPIC_MASS_TABLE = {
 }
 
 # --- Algoritmos ---
+def reverse_complement(seq: str) -> str:
+    """Retorna o reverso complementar de uma sequência de DNA."""
+    complement = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
+    bases = [complement[base] if base in complement else base for base in reversed(seq)]
+    
+    return "".join(bases)
+
 def hamming_distance(s1, s2):
     """Calcula o número de diferenças entre duas strings de mesmo tamanho."""
     return sum(1 for a, b in zip(s1, s2) if a != b)
