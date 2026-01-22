@@ -1,8 +1,8 @@
-from utils.io import read_lines
+from utils import read_lines, hamming_distance
 
 def solve():
     seq1, seq2 = read_lines()
-    return sum(1 for a, b in zip(seq1, seq2) if a != b)
+    return hamming_distance(seq1, seq2)
 
 if __name__ == "__main__":
     print(solve())

@@ -1,9 +1,8 @@
-from utils.io import read_input
+from utils import read_input, reverse_complement
 
 def solve():
-    data = read_input()
-    table = str.maketrans("ACGT", "TGCA")
-    print(data.translate(table)[::-1])
+    dna = read_input()
+    return reverse_complement(dna)
 
 if __name__ == "__main__":
-    solve()
+    print(solve())

@@ -57,18 +57,21 @@ def hamming_distance(s1, s2):
     """Calcula o número de diferenças entre duas strings de mesmo tamanho."""
     return sum(1 for a, b in zip(s1, s2) if a != b)
 
-def translate_protein(seq, table=DNA_CODON_TABLE):
+def translate_protein(seq, table=DNA_CODON_TABLE, strict=False):
     """Traduz DNA/RNA para Proteína até encontrar um Stop Codon."""
     protein = []
     for i in range(0, len(seq), 3):
         codon = seq[i:i+3]
-        if len(codon) < 3: break
+        if len(codon) < 3:
+            return None if strict else "".join(protein)
         
-        amino_acid = table.get(codon)
-        if amino_acid == 'Stop': break
-        if amino_acid: protein.append(amino_acid)
-        
-    return "".join(protein)
+        amino = table.get(codon)
+        if amino == 'Stop':
+            return "".join(protein)
+        if amino is not None:
+            protein.append(amino)
+            
+    return None if strict else "".join(protein)
 
 def sliding_window(seq, k):
     """Generator que retorna janelas de tamanho k da sequência."""
